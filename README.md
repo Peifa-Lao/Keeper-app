@@ -6,7 +6,7 @@ a) Divide into two main components:
 
 1)Parent Component: App.jsx 
 
-2)Child Component: Header.jsx Create.jsx Note,jsx Footer,jsx
+2)Child Component: Header.jsx Create.jsx Note.jsx Footer.jsx
 
 Benefit: simpfies the code and make them easiler to maintaince their functionalities
 
