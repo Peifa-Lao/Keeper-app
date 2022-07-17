@@ -23,7 +23,9 @@ function App() {
 
   return (
     <div>
+    //header component
       <Header />
+    //create area component
       <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {
         return (
@@ -36,6 +38,7 @@ function App() {
           />
         );
       })}
+      //Footer component
       <Footer />
     </div>
   );
