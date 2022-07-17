@@ -25,7 +25,7 @@ function App() {
     <div>
     //header component
       <Header />
-    //create area component
+    //create area component and {} is javascript expression
       <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {
         return (
