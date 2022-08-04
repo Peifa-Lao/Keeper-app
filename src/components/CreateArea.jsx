@@ -25,6 +25,7 @@ function CreateArea(props) {
   }
 
   function submitNote(event) {
+    //pass it back to app.jsx
     props.onAdd(note);
     //clear the node inside the box after submition
     setNote({
