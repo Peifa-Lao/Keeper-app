@@ -27,11 +27,14 @@ function App() {
       <Header />
     //create area component and {} is javascript expression
       <CreateArea onAdd={addNote} />
-
-     //use arrow function to pass Note to map throught all array of notes
+     //{} indicates javascript 
+     //use arrow function to pass Note to map throught all array of notes  
+     //map function is going to loop throught the notes array
+     //noteItem has index, or can use UUID
       {notes.map((noteItem, index) => {
         return (
           //render note component and create a new note using the properties from that note
+          //pass properties to Node component 
           <Note
             key={index}
             id={index}
