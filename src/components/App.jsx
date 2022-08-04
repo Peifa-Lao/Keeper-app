@@ -8,7 +8,7 @@ function App() {
   const [notes, setNotes] = useState([]);
   
   //receive the object from createArea.jsx
-  
+ 
   function addNote(newNote) {
     setNotes(prevNotes => {
       return [...prevNotes, newNote];
@@ -28,6 +28,7 @@ function App() {
     //header component
       <Header />
     //create area component and {} is javascript expression
+    //receiving data from CreateArea and calling addNote function in app.jsx
       <CreateArea onAdd={addNote} />
      //{} indicates javascript 
      //use arrow function to pass Note to map throught all array of notes  
