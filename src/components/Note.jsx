@@ -3,6 +3,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 
 function Note(props) {
   function handleClick() {
+    //trigger the deleteNode function on app.js
     props.onDelete(props.id);
   }
 
@@ -10,6 +11,7 @@ function Note(props) {
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
+      //when the button is clicked, going to handleClick
       <button onClick={handleClick}>
         <DeleteIcon />
       </button>
