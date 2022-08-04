@@ -28,6 +28,7 @@ function CreateArea(props) {
       title: "",
       content: ""
     });
+    //prevent reload the web
     event.preventDefault();
   }
 
@@ -48,13 +49,16 @@ function CreateArea(props) {
         )}
         <textarea
           name="content"
+          //trigger expand function
           onClick={expand}
+          //Trigger handleChange function
           onChange={handleChange}
           value={note.content}
           placeholder="Take a note..."
           rows={isExpanded ? 3 : 1}
         />
         <zoom in={isExpanded}>
+            //trigger sumbit note here
           <Fab onClick={submitNote}>
             <AddIcon />
           </Fab>
