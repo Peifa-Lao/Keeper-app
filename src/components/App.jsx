@@ -27,9 +27,11 @@ function App() {
       <Header />
     //create area component and {} is javascript expression
       <CreateArea onAdd={addNote} />
+
+     //use arrow function to pass Note to map throught all array of notes
       {notes.map((noteItem, index) => {
         return (
-          //render note component
+          //render note component and create a new note using the properties from that note
           <Note
             key={index}
             id={index}
