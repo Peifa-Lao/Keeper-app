@@ -24,6 +24,7 @@ function CreateArea(props) {
 
   function submitNote(event) {
     props.onAdd(note);
+    //clear the node inside the box after submition
     setNote({
       title: "",
       content: ""
