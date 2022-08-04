@@ -13,6 +13,7 @@ function CreateArea(props) {
 
   function handleChange(event) {
     //Destructure the event.target
+    //Equal to event.target.name/event.target.value
     const { name, value } = event.target;
 
     setNote((prevNote) => {
