@@ -8,6 +8,7 @@ function Note(props) {
   }
 
   return (
+    //className note in css
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
