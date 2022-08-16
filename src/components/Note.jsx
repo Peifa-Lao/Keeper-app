@@ -1,9 +1,13 @@
 import React from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
 
+//(props) receiving data from App.js 
+
 function Note(props) {
+  
   function handleClick() {
-    //trigger the deleteNode function on app.js
+    //trigger the deleteNode function on app.js since <Note /> has onDelete and call deleteNote
+    //(props.id) is pick up the id sent from app.js <Node />
     props.onDelete(props.id);
   }
 
