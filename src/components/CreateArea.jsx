@@ -5,17 +5,23 @@ import Zoom from "@material-ui/core/Zoom";
 
 function CreateArea(props) {
   const [isExpanded, setExpanded] = useState(false);
+  
+  //the initial state of the ojbect(title&content) set to ""
 
   const [note, setNote] = useState({
     title: "",
     content: ""
   });
-
+  
+  //Once onChange on input & textarea get event, will trigger this function
   function handleChange(event) {
+    
     //Destructure the event.target
     //Equal to event.target.name/event.target.value
+    
     const { name, value } = event.target;
-
+    
+    //setNode first receive the preNote, add name and value into setNote, then return to setNode
     setNote((prevNote) => {
       return {
         ...prevNote,
@@ -23,15 +29,20 @@ function CreateArea(props) {
       };
     });
   }
-
+  
+  //the event is trigger by onClick
   function submitNote(event) {
-    //pass it back to app.jsx
+    
+    //calling this onAdd is equivalent to calling onAdd at app.js
+    //pass over current created note back to app.jsx
     props.onAdd(note);
+    
     //clear the node inside the box after submition
     setNote({
       title: "",
       content: ""
     });
+    
     //prevent reload the web
     event.preventDefault();
   }
@@ -43,6 +54,8 @@ function CreateArea(props) {
   return (
     <div>
       <form className="create-note">
+    
+        //In input and textarea, it get note.title & note.content from note above 
         {isExpanded && (
           <input
             name="title"
@@ -51,6 +64,7 @@ function CreateArea(props) {
             placeholder="Title"
           />
         )}
+        
         <textarea
           name="content"
           //trigger expand function
@@ -61,12 +75,14 @@ function CreateArea(props) {
           placeholder="Take a note..."
           rows={isExpanded ? 3 : 1}
         />
+            
         <zoom in={isExpanded}>
-            //trigger sumbit note here
+           //trigger sumbitNote function here
           <Fab onClick={submitNote}>
             <AddIcon />
           </Fab>
         </zoom>
+
       </form>
     </div>
   );
